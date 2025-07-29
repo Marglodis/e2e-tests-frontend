@@ -1,0 +1,34 @@
+{
+  "validUser": {
+    "email": "testeradl@test.com",
+    "password": "Tester@2025",
+    "fullName": "Administrador Sistema"
+  },
+  "invalidUsers": {
+    "wrongCredentials": {
+      "email": "wrong@test.com",
+      "password": "wrongpass",
+      "expectedError": "Credenciales inválidas"
+    },
+    "emptyEmail": {
+      "email": "",
+      "password": "Admin123!",
+      "expectedError": "El email es requerido"
+    },
+    "emptyPassword": {
+      "email": "admin@productos.com",
+      "password": "",
+      "expectedError": "La contraseña es requerida"
+    },
+    "invalidEmailFormat": {
+      "email": "invalid-email",
+      "password": "Admin123!",
+      "expectedError": "Formato de email inválido"
+    },
+    "sqlInjection": {
+      "email": "admin@test.com'; DROP TABLE users; --",
+      "password": "password",
+      "expectedError": "Credenciales inválidas"
+    }
+  }
+}

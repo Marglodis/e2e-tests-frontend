@@ -1,0 +1,60 @@
+{
+  "iphone16": {
+    "name": "iPhone 16",
+    "description": "El último iPhone con chip A18 y cámara mejorada",
+    "price": "999.99",
+    "category": "Smartphones",
+    "stock": "50",
+    "sku": "IPH16-128-BLU"
+  },
+  "iphone16ProMax": {
+    "name": "iPhone 16 Pro Max",
+    "description": "iPhone 16 Pro Max con pantalla de 6.9 pulgadas y cámara profesional",
+    "price": "1199.99",
+    "category": "Smartphones", 
+    "stock": "25",
+    "sku": "IPH16PM-256-BLU"
+  },
+  "invalidProducts": {
+    "emptyName": {
+      "name": "",
+      "description": "Producto sin nombre",
+      "price": "999.99",
+      "category": "Smartphones",
+      "stock": "10",
+      "expectedError": "El nombre del producto es requerido"
+    },
+    "negativePrice": {
+      "name": "iPhone Test",
+      "description": "Producto con precio negativo",
+      "price": "-100",
+      "category": "Smartphones", 
+      "stock": "10",
+      "expectedError": "El precio debe ser mayor a 0"
+    },
+    "negativeStock": {
+      "name": "iPhone Test",
+      "description": "Producto con stock negativo",
+      "price": "999.99",
+      "category": "Smartphones",
+      "stock": "-5",
+      "expectedError": "El stock debe ser mayor o igual a 0"
+    },
+    "longName": {
+      "name": "a",
+      "description": "Producto con nombre muy largo",
+      "price": "999.99",
+      "category": "Smartphones",
+      "stock": "10",
+      "expectedError": "El nombre no puede exceder 255 caracteres"
+    },
+    "specialCharacters": {
+      "name": "<script>alert('xss')</script>",
+      "description": "Test XSS",
+      "price": "999.99",
+      "category": "Smartphones",
+      "stock": "10",
+      "expectedError": "Caracteres no permitidos en el nombre"
+    }
+  }
+}

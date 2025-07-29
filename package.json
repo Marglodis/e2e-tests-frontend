@@ -1,0 +1,23 @@
+{
+  "name": "e2e-products-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:auth": "cucumber-js features/01-user-authentication.feature",
+    "test:query": "cucumber-js features/02-product-query.feature",
+    "report": "cucumber-js --format json:reports/cucumber_report.json && node generate-report.js",
+    "clean": "rm -rf reports/* screenshots/*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.1.0",
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.1.0",
+    "allure-commandline": "^2.34.1",
+    "cucumber-html-reporter": "^7.2.0"
+  }
+}
